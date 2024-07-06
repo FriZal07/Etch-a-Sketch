@@ -8,23 +8,28 @@
 
 <body>
     <div id="container">
-        <div id="head"></div>
+        <div id="head">Etch-a-Sketch!</div>
         <div id="content">
             <div id="mainContent">
                 <div class="menu">
                     <div class="menu content">
                         <div class="color">
-                            <div>Color</div>
-                            <div></div>
+                            <div style="margin: 0 auto;">Color</div>
+                            <div class="containerdiv">
+                                <input id="colorPicker" type="color" value="#333333"></input>
+                            </div>
                         </div>
                         <div class="gridEditor">
-                            <div>Grid</div>
-                            <div><input type="range"></div>
+                            <div style="margin: 0 auto;">Grid</div>
+                            <div class="containerdiv">
+                                <input id="gridSelector" type="range"></input>
+                                <div>16x16</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="grid">
-                    <div class="grid title">TITLE</div>
+                    <div class="grid title">Grid Square</div>
                     <div class="grid space">
                         <div class="blockgrid">
                             <div class="boxes">box</div>
