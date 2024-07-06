@@ -1,0 +1,108 @@
+html, body {
+    min-height: 100vh;
+} 
+
+div {
+    border: solid 1px gray;
+    padding: 1%;
+    margin: 2px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex: auto;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1000px;
+    gap: 5px;
+}
+
+#head{
+    display: flex;
+    flex: 0 1 50px;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+#mainContent{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1 1 30%;
+}
+
+.menu.content{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0 1 30%;
+}
+
+.color{
+    display: flex;
+    flex-direction: column;
+}
+
+.gridEditor{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+}
+
+.grid.title{
+    flex: 0 1 10px;
+}
+
+.grid.space{
+    flex: 1 0 auto;
+    justify-content: center;
+    
+
+    .blockgrid{
+        box-sizing: border-box;
+        aspect-ratio: 1/1;
+
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        }
+}
+
+.boxes{
+    font-size: 2px;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex: 0 1 25%;
+}
+
+
+
+#footer{
+    display: flex;
+    flex: 0 1 50px
+}
