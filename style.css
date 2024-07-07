@@ -320,3 +320,9 @@ body{
         min-width: 30%;
     }
 }
+
+@media (max-width: 1300px){
+    .boxes{
+        border: solid 0.5px #1F2937;;
+    }
+}
