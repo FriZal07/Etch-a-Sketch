@@ -30,6 +30,9 @@ body{
     justify-content: center;
     flex: auto;
 
+    font-weight: bold;
+    font-family: "roboto";
+
     background-color: #ededed;
 }
 
@@ -39,28 +42,29 @@ body{
     flex: 0 1 1500px;
     gap: 5px;
 
-    background-color: #ededed;
+    padding: 10px;
 }
 
-/* header */
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
 
-#head{
+#header{
     display: flex;
     flex: 0 1 40px;
     justify-content: center;
 
     font-size: 3rem;
     padding: 1% 5%;
-    font-weight: bold;
-    font-family: "roboto";
     border-radius: 0.5em;
-    color: whitesmoke;
-    
+    color: white;
 
     background-color: #1F2937;
 }
 
-/* content */
+/*------------------------------------*\
+  #CONTENT
+\*------------------------------------*/
 
 #content{
     display: flex;
@@ -70,7 +74,9 @@ body{
     background-color: #ededed;
 }
 
-#mainContent{
+/* |||| CONTENT1 ||||| */
+
+#content1{
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -79,27 +85,29 @@ body{
 
     border-radius: 1em;
     background-color: #1F2937;
-
 }
 
-/* menu */
+/* MENU */
+
+.menu_decoration{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;
+
+    min-width: 0;
+    padding: 10px;
+    border-radius: 1em;
+
+    background-color: #ededed;
+}
+
+
 
 .menu{
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    flex: 1 1 30%;
-
-    padding: 10px;
-    border-radius: 1em;
-    background-color: #ededed;
-}
-
-.menu.content{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    flex-basis: 0 1 30%;
+    flex: 1 1 30%;
     gap: 30px;
 
     border-radius: 0.5em;
@@ -107,31 +115,22 @@ body{
     background-color: #1F2937;
 }
 
-.color{
+
+.color_box{
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     padding: 10px;
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "roboto";
-
     border-radius: 0.5em;
     background-color: #ededed;
-    
 }
 
-.containerdiv{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex: auto;
-}
-
-#colorPicker{
+#color_selector{
     display: flex;
     flex: 1 1 100px;
+
     max-width: 100%;
     min-width: 100%;
 
@@ -139,44 +138,44 @@ body{
     background-color: white;
 }
 
+.content_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: auto;
+}
 
 
-
-.gridEditor{
+.grid_box{
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     padding: 10px;
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "roboto";
 
     border-radius: 0.5em;
     background-color: #ededed;
-
-    .containerdiv{
-        gap: 10px;
-        flex-direction: row;
-    }
 }
 
-#gridSelector{
+#grid_selector{
     display: flex;
     flex: 1 1 30px;
+
     max-width: 100%;
     min-width: none;
 
     background-color: sandybrown;
 }
 
-/* grid */
 
+/* GRID */
 
 .grid{
     display: flex;
     flex-direction: column;
     flex: 1 1 60%;
+
     gap: 10px;
     padding: 0;
 
@@ -184,36 +183,37 @@ body{
     background-color: #ededed;
 }
 
-.grid.title{
+.grid_title{
+    display: flex;
+    justify-content: center;
     flex: 0 0 45px;
 
     padding: 15px;
     font-size: 2rem;
-    font-weight: bold;
-    font-family: "roboto";
+
     color: white;
-    text-align: center;
     border-radius: 0;
     background-color: #1F2937;
 }
 
-.grid.space{
+.grid_space{ 
     flex: 1 0 auto;
     justify-content: center;
 
     margin: 10px;
+    padding: 0;
     background-color: #1F2937;
+}
 
-    .blockgrid{
-        box-sizing: border-box;
-        aspect-ratio: 1/1;
+.grid_screen{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
 
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
 
-        background-color: #ededed;
-        }
+    background-color: #ededed;
 }
 
 .boxes{
@@ -226,11 +226,12 @@ body{
     aspect-ratio: 1/1;
     
     padding: 0;
-
     background-color: white;
 }
 
-/* footer */
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
 
 #footer{
     display: flex;
@@ -238,29 +239,27 @@ body{
     justify-content: center;
 
     font-size: 3rem;
-    font-weight: bold;
-    font-family: "roboto";
     border-radius: 0.5em;
     color: whitesmoke;
-    
-
     background-color: #1F2937;
 }
 
+/* MEDIA QUARY */
+
 @media (min-width: 200px){
-    .menu{
+    .menu_decoration{
         min-width: 50%;
     }
 }
 
 @media (min-width: 500px){
-    .menu{
+    .menu_decoration{
         min-width: 40%;
     }
 }
 
 @media (min-width: 1000px){
-    .menu{
+    .menu_decoration{
         min-width: 30%;
     }
 }
