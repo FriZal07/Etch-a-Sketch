@@ -12,7 +12,7 @@ html, body {
     min-height: 100vh;
 } 
 
-div {
+div,button {
     padding: 1%;
 }
 
@@ -39,7 +39,7 @@ body{
 #container{
     display: flex;
     flex-direction: column;
-    flex: 0 1 1500px;
+    flex: 0 1 1800px;
     gap: 5px;
 
     padding: 10px;
@@ -78,7 +78,6 @@ body{
 
 #content1{
     display: flex;
-    align-content: flex-start;
     flex-wrap: wrap;
     flex: 0 1 auto;
     gap: 10px;
@@ -92,7 +91,7 @@ body{
 .menu_decoration{
     display: flex;
     flex-direction: column;
-    flex: 1 1 30%;
+    flex: 1 1 20%;
 
     min-width: 0;
     padding: 10px;
@@ -100,8 +99,6 @@ body{
 
     background-color: #ededed;
 }
-
-
 
 .menu{
     display: flex;
@@ -116,12 +113,15 @@ body{
 }
 
 
+
+
 .color_box{
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     padding: 10px;
+    padding-top: 15px;
     font-size: 1.5rem;
     border-radius: 0.5em;
     background-color: #ededed;
@@ -143,19 +143,34 @@ body{
     justify-content: center;
     flex-direction: column;
     flex: auto;
-}
 
+    padding: 10px;
+}
 
 .grid_box{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 
     padding: 10px;
+    padding-top: 15px;
     font-size: 1.5rem;
 
     border-radius: 0.5em;
     background-color: #ededed;
+
+    .content_container{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+}
+
+#grid_shower{
+    padding: 2%;
+    border-radius: 0.5em;
+    border: black solid 3px;
 }
 
 #grid_selector{
@@ -168,6 +183,48 @@ body{
     background-color: sandybrown;
 }
 
+.button_container{
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    gap: 5px;
+
+    border: 0.35rem solid #ededed;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+#reset{
+    display: flex;
+    flex: 0 1 5%;
+    justify-content: center;
+
+    font-weight: bold;
+    font-family: "roboto";
+
+    padding: 10px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+
+    border-radius: 0.5em;
+    background-color: #ededed;
+}
+
+#grid{
+    display: flex;
+    flex: 0 1 5%;
+    justify-content: center;
+
+    font-weight: bold;
+    font-family: "roboto";
+
+    padding: 10px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+
+    border-radius: 0.5em;
+    background-color: #ededed;
+}
 
 /* GRID */
 
@@ -218,7 +275,7 @@ body{
 
 .boxes{
     display: flex;
-    flex: 0 1 16.6%;
+    flex: 0 1 100%;
 
     font-size: 2px;
     box-sizing: border-box;
