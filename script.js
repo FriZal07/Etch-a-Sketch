@@ -1,5 +1,5 @@
-let gridSize = 0;
-let colorCurrentValue = "";
+let gridSize = 1;
+let colorCurrentValue = "#515151";
 let gridStatus = true;
 
 let colorSelector = document.querySelector("#color_selector");
@@ -7,6 +7,10 @@ let gridSelector = document.querySelector("#grid_selector");
 let gridCounter = document.querySelector("#grid_shower");
 let resetGrid = document.querySelector("#reset");
 let borderGrid = document.querySelector("#grid");
+
+let mouseDown = false
+document.body.onmousedown = () => {mouseDown = true}
+document.body.onmouseup = () => {mouseDown = false}
 
 colorSelector.addEventListener("change",(e)=> colorCurrentValue = e.target.value);
 gridSelector.addEventListener("change",(e)=> {gridSize = e.target.value; GridChange(gridSize);});
@@ -16,6 +20,13 @@ borderGrid.addEventListener("click", ()=> {
     else{gridline(true) }
 })
 
+
+function colorBox(selectedBox){
+    if (selectedBox.type === 'mouseover' && !mouseDown) return
+    else{   
+        selectedBox.target.style.backgroundColor = colorCurrentValue;
+    }
+}
 
 function GridChange(newSize){
 
@@ -31,8 +42,13 @@ function GridChange(newSize){
     for (let i = 0; i < newSize*newSize; i++){
 
         let box = document.createElement("div");
+
         box.classList.add("boxes")
         box.style.flex = GridPerc ;
+        box.setAttribute('ondragstart', 'dragstart(event)');
+
+        box.addEventListener("mouseover",(e) => {colorBox(e)})
+        box.addEventListener('mousedown',(e) => {colorBox(e)})
 
         gridSquare.appendChild(box);
     }
@@ -40,6 +56,7 @@ function GridChange(newSize){
     if (gridStatus == false) gridline(false);
 
 }
+
 
 function gridline(futurestatus){
 
@@ -67,5 +84,10 @@ function gridline(futurestatus){
     borderGrid.textContent = "Disable Grid";
     }
     
-
 }
+
+function dragstart(event){
+    event.preventDefault();
+}
+
+GridChange(gridSize);
